@@ -1,0 +1,308 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/****************************************************/
+/*用來看框架
+
+*{
+	outline: 1px solid blue;
+}
+
+*/
+
+/*整體的*/
+a{
+	text-decoration: none;
+}
+body{
+	background: #000000;
+	font-family: Bruno Ace SC;
+}
+/***************************************************/
+
+/**nav**/
+.nav{
+	max-width: 1296px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding-top: 40px;
+}
+.nav li a{
+	color: #D1D1D1;
+}
+
+
+/**header**/
+.header{
+	max-width: 1296px;
+	margin: 0 auto;
+	display: flex;
+	margin-bottom: 72px;
+	margin-top: 72px;
+}
+.header img{
+	max-width: 636px;
+	margin-right: 24px;
+}
+.header .name{
+	margin-top: 232px;
+}
+.header .name h2{
+	color: #FFFFFF;
+	font-size: 64px;
+	line-height: 96px;
+	font-weight: 400;
+}
+.header .name h1{
+	color: #00FFA3;
+	font-size: 128px;
+	line-height: 192px;
+	font-weight: 400;
+	text-align: right;
+}
+.header .name a{
+	padding: 12px 24px;
+	border-radius: 32px;
+	background: #FFFFFF;
+	color: #000000;
+	line-height: 24px;
+	font-weight: 400;
+}
+.header .name a:hover{
+	background: #00FFA3;
+	color: #FFFFFF;
+}
+/*.header .name img{
+	vertical-align: middle;
+}*/ /*下這個是為了讓文字(contact me)跟圖(箭頭)可以對齊，但不知為何圖脫離了原本a連結的範圍，跑到了下面。而在project中，針對see more旁的箭頭圖下這個語法就沒問題?*/ 
+
+
+/**intro**/
+.intro-bg{
+	background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/background-img.png?raw=true);
+}
+.intro{
+	display: flex;
+	max-width: 1296px;
+	margin: 0 auto;
+	padding: 160px 0;
+}
+.intro .intro-content h2{
+	color: #FFFFFF;
+	font-size: 64px;
+	line-height: 96px;
+	font-weight: 400;
+	margin-bottom: 36px;
+}
+.intro .intro-content p{
+	color: #FFFFFF;
+	font-size: 24px;
+	line-height: 36px;
+	font-weight: 400;
+	margin-bottom: 32px;
+}
+.intro .intro-img{
+	display: flex;
+}
+.intro .intro-img img{
+	margin-left: 24px;
+}
+
+
+/**about**/
+.about-bg{
+	background: #FFFFFF;
+}
+.about{
+	max-width: 1296px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	padding: 160px 0;
+}
+.about-bg .about-card{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.about-bg .about-card li{
+	border: 1px solid #E3E3E3;
+	max-width: 274px; /*不確定width這樣下對不對? 因為有下padding 16px，而設計稿li長306px，所以306px-16px-16px=274px*/ /*為何li會多出下面的空白(藍色的部分)?*/
+	box-shadow: 4px 4px 4px #000000;
+	padding: 16px;
+	margin-bottom: 24px;
+}
+.about-bg .about-card h3{
+	color: #15161D;
+	font-size: 20px;
+	line-height: 30px;
+	font-weight: 400;
+}
+.about-bg .about-card p{
+	color: #15161D;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+}
+.about-bg .about-me{
+	max-width: 526px;
+	margin-left: 134px;
+}
+.about-bg .about-me h2{
+	color: #000000;
+	font-size: 64px;
+	line-height: 96px;
+	font-weight: 400;
+	margin-bottom: 36px;
+}
+.about-bg .about-me p{
+	color: #000000;
+	font-size: 24px;
+	line-height: 36px;
+	font-weight: 400;
+}
+
+
+/**contact**/
+.contact{
+	max-width: 1296px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 96px 0;
+}
+.contact-me{
+	display: flex;
+}
+.contact-me h2{
+	color: #FFFFFF;
+	font-size: 64px;
+	line-height: 96px;
+	font-weight: 400;
+}
+.contact-me img{
+	max-width: 100px;
+}
+.social-media{
+	display: flex;
+	max-width: 526px;
+}
+.social-media img{
+	width: 33.333%;
+}
+
+
+/**project**/
+.project-bg{
+	background: #FFFFFF;
+}
+.project-bg h2{
+	color: #000000;
+	font-size: 64px;
+	line-height: 96px;
+	font-weight: 400;
+	margin-left: 650px;/*不太知道該怎麼把h2移到如設計稿的位置，我是邊調數字邊對設計稿，用肉眼看感覺位置一樣，所以最終下650px。不知這樣的方法是否可行?*/
+	padding-top: 150px;
+}
+.project{
+	max-width: 1296px;
+	margin: 0 auto;
+	display: flex;
+	padding-bottom: 150px;
+}
+.project-content{
+	margin-left: 24px;
+}
+.project-content img{
+	vertical-align: middle;
+}
+.project-content .project-content-top{
+	display: flex;
+	margin-bottom: 24px;
+}
+.project-content .project-content-top .see-more{
+	margin-left: 24px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.project-content .project-content-top .see-more p{
+	color: #15161D;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+}
+.project-content .project-content-top .see-more a{
+	color: #FFFFFF;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	background: #000000;
+	padding: 12px 24px;
+	border-radius: 32px;
+}
+.project-content .project-content-top .see-more a:hover{
+	background: #00FFA3;
+	color: #FFFFFF;
+}
+.project-content .project-content-down{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+/**footer**/
+.footer p{
+	color: #FFFFFF;
+	text-align: center;
+	padding: 40px 0;
+}
